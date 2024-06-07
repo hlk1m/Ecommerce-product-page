@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="쇼핑몰 상품 페이지" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <meta property="og:image" content="./images/image-product-1.jpg" />
+    <meta property="og:site_name" content="Sneaker Company - 상품 페이지" />
+    <meta property="og:description" content="Fall Limited Edition Sneakers" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/31f273f6bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>쇼핑몰 상품 페이지 | Frontend Mentor</title>
+
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <script src="src/app.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- header -->
+      <header class="header">
+        <nav class="navbar">
+          <button class="nav_menu">
+            <img src="images/icon-menu.svg" />
+          </button>
+          <a class="header_logo" href="#"
+            ><img src="images/logo.svg" alt="logo"
+          /></a>
+          <ul class="nav_pages disable">
+            <li>
+              <button class="nav_close">
+                <img src="images/icon-close.svg" alt="close" />
+              </button>
+            </li>
+            <li class="nav_page"><a href="#">Collections</a></li>
+            <li class="nav_page"><a href="#">Men</a></li>
+            <li class="nav_page"><a href="#">Women</a></li>
+            <li class="nav_page"><a href="#">About</a></li>
+            <li class="nav_page"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- shopping cart and user info -->
+        <div class="user-container">
+          <button class="cart_btn">
+            <img src="images/icon-cart.svg" alt="cart" />
+            <div class="plus hidden">+</div>
+          </button>
+          <button class="user-img">
+            <img src="images/image-avatar.png" alt="user-image" />
+          </button>
+          <!-- shopping cart -->
+          <div class="cart-box hidden">
+            <h3 class="cart_title">Cart</h3>
+            <ul class="cart_list">
+              <li class="cart_empty">
+                <strong> Your cart is empty.</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- product info -->
+      <section class="product-detail">
+        <!-- images -->
+        <article class="images-container">
+          <div class="images_main" data-type="product-1">
+            <!-- image -->
+          </div>
+          <div class="mobile-btns">
+            <button class="mobile_left" data-type="left">
+              <img src="images/icon-previous.svg" data-type="left" />
+            </button>
+            <button class="mobile_right" data-type="right">
+              <img src="images/icon-next.svg" data-type="right" />
+            </button>
+          </div>
+          <ul class="thumbnails">
+            <li id="product-1" class="thumbnail-img selected">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                data-type="product-1"
+              />
+            </li>
+            <li id="product-2" class="thumbnail-img">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                data-type="product-2"
+              />
+            </li>
+            <li id="product-3" class="thumbnail-img">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                data-type="product-3"
+              />
+            </li>
+            <li id="product-4" class="thumbnail-img">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                data-type="product-4"
+              />
+            </li>
+          </ul>
+        </article>
+        <!-- info -->
+        <div class="product-container">
+          <small class="product_brand">Sneaker Company</small>
+          <h1 class="product_title">Fall Limited Edition Sneakers</h1>
+          <div class="product_content">
+            <p class="content_info">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="product_price">
+              <h5 class="price_price">125,000원</h5>
+              <span class="price_sale">50%</span>
+              <small class="before_price">250,000원</small>
+            </div>
+            <div class="product_btns">
+              <div class="btns_count">
+                <button class="count_minus countBtn">
+                  <i class="fa-solid fa-minus"></i></button
+                ><span class="count_num">0</span
+                ><button class="count_plus countBtn">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <button class="btns_add">
+                <img src="images/icon-cart.svg" />Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="overlay hidden">
+        <article class="overlay_images">
+          <div class="overlay_close">
+            <button class="close_btn" data-btn="close">
+              <img src="images/icon-close.svg" />
+            </button>
+          </div>
+          <div class="overlay_main">
+            <button class="overlay_btn overlay_left" data-btn="left">
+              <img src="images/icon-previous.svg" data-btn="left" />
+            </button>
+            <div class="overlay_main-img"></div>
+            <button class="overlay_btn overlay_right" data-btn="right">
+              <img src="images/icon-next.svg" data-btn="right" />
+            </button>
+          </div>
+
+          <ul class="overlay_thumbnails">
+            <li data-type="product-1" class="overlay_thumbnail selected">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                data-type="product-1"
+              />
+            </li>
+            <li data-type="product-2" class="overlay_thumbnail">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                data-type="product-2"
+              />
+            </li>
+            <li data-type="product-3" class="overlay_thumbnail">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                data-type="product-3"
+              />
+            </li>
+            <li data-type="product-4" class="overlay_thumbnail">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                data-type="product-4"
+              />
+            </li>
+          </ul>
+        </article>
+      </section>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor </a
+        >. Coded by HLK.
+      </div>
+    </div>
+  </body>
+</html>
